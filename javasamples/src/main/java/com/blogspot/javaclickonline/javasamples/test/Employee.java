@@ -11,6 +11,7 @@ public class Employee implements Serializable, Comparable<Employee> {
 	private String name;
 	private int age;
 	private double salary;
+	private transient Address address;
 	
 	public Employee(String name, int age, double salary) {
 		
@@ -54,7 +55,18 @@ public class Employee implements Serializable, Comparable<Employee> {
 	public void setSalary(double salary) {
 		this.salary = salary;
 	}
-	
+	/**
+	 * @return the address
+	 */
+	public Address getAddress() {
+		return address;
+	}
+	/**
+	 * @param address the address to set
+	 */
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	public int compareTo(Employee o) {
 		
 		int result = 0;

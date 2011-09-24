@@ -38,4 +38,12 @@ public class InnerClassTests {
 		MyOuter.MyInner inner = new MyOuter().new MyInner();
 		inner.showThisOuter();
 	}
+	
+	@Test
+	public void testStaticNestedClass() {
+		
+		System.err.println("testStaticNestedClass");
+		StaticMyOuter.MyInner myInner = new StaticMyOuter.MyInner();
+		myInner.go();
+	}
 }
